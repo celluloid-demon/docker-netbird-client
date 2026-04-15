@@ -5,7 +5,6 @@ services:
     image: ${IMAGE:-netbirdio/netbird}:${TAG:-latest}
     environment:
       - "NB_MANAGEMENT_URL=${NB_MANAGEMENT_URL}"
-      # - "NB_SETUP_KEY=${NB_SETUP_KEY}"
     volumes:
       - ${DATA:-data}:/var/lib/netbird
     cap_add:
