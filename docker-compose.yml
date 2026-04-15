@@ -9,6 +9,7 @@ services:
       - ${DATA:-data}:/var/lib/netbird
     cap_add:
       - NET_ADMIN
+    restart: unless-stopped
 
 volumes:
   data:
