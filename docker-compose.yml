@@ -4,8 +4,8 @@ services:
   netbird:
     image: ${IMAGE:-netbirdio/netbird}:${TAG:-latest}
     environment:
-      - NB_MANAGEMENT_URL=${NB_MANAGEMENT_URL}  # edit in production for quick testing
-      - NB_SETUP_KEY=${NB_SETUP_KEY}            # edit in production for quick testing
+      - "NB_MANAGEMENT_URL=${NB_MANAGEMENT_URL}"  # edit in production for quick testing
+      - "NB_SETUP_KEY=${NB_SETUP_KEY}"            # edit in production for quick testing
     volumes:
       - ${DATA:-data}:/var/lib/netbird
     cap_add:
