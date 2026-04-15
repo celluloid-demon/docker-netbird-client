@@ -1,0 +1,5 @@
+---
+services:
+  netbird-client:
+    environment:
+      - NB_SETUP_KEY=${NB_SETUP_KEY}

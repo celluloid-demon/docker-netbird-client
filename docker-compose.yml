@@ -1,7 +1,7 @@
+---
 services:
-  app:
-    # container_name: netbird-client
-    hostname: ${HOSTNAME}
+  netbird-client:
+    hostname: ${HOSTNAME} # This is what will show in the netbird server dashboard
     cap_add:
       - NET_ADMIN
       - SYS_ADMIN
@@ -10,14 +10,9 @@ services:
       # Required when using userspace mode or when kernel module is not available
       - /dev/net/tun
     network_mode: host
-    env_file:
-      - ${SECRET_ENV_FILE}
-    # environment:
-    #   - NB_SETUP_KEY=${NB_SETUP_KEY}
     volumes:
-      - data:/var/lib/netbird
-    image: netbirdio/netbird:latest
+      - ${DATA:-data}:/var/lib/netbird
+    image: ${IMAGE:-netbirdio/netbird}:${TAG:-latest}
 
 volumes:
   data:
-    # name: netbird-client
