@@ -10,8 +10,8 @@ services:
           # Required when using userspace mode or when kernel module is not available
           - /dev/net/tun
       network_mode: host
-      environment:
-          # - NB_SETUP_KEY=<SETUP KEY> # [REMOVED]
+      # environment:                    # [REMOVED]
+          # - NB_SETUP_KEY=<SETUP KEY>  # [REMOVED]
       volumes:
           - netbird-client:/var/lib/netbird
       image: netbirdio/netbird:latest
