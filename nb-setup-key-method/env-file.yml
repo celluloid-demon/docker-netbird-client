@@ -1,5 +1,0 @@
----
-services:
-  netbird-client:
-    env_file:
-      - ${SECRET_ENV_FILE}

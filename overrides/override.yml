@@ -1,0 +1,11 @@
+services:
+  netbird-client:
+    hostname: ${HOSTNAME}
+    env_file:
+      - ${SECRET_ENV_FILE}
+    environment:
+      - "NB_MANAGEMENT_URL=${NB_MANAGEMENT_URL}"
+    volumes:
+      - ${DATA:-data}:/var/lib/netbird
+    image: netbirdio/netbird:${TAG:-latest}
+    restart: unless-stopped
