@@ -2,7 +2,7 @@ services:
   netbird-client:
     hostname: ${HOSTNAME}
     env_file:
-      - ${SECRETS}/.env
+      - ${SECRETS}/netbird-client.env
     environment:
       - "NB_MANAGEMENT_URL=${MANAGEMENT_URL}"
     volumes:
