@@ -15,6 +15,6 @@ services:
       volumes:
           - netbird-client:/var/lib/netbird
       image: netbirdio/netbird:latest
-volumes:
-  netbird-client:
-      name: netbird-client
+# volumes:                      # [REMOVED]
+#   netbird-client:             # [REMOVED]
+#       name: netbird-client    # [REMOVED]
